@@ -1,0 +1,43 @@
+Please check the below Todays list of points 
+1. New API to get roles from the database in dropdown.
+2. State and City Dropdown connection as per id
+3. Get data in model after adding registration details in Register page.
+4. Upload file not able to get in multipartFile - issue
+5. File store function to save uploaded file in upload directory.
+
+
+
+
+@Override
+	public List<LocationResponse> getAllLocations(String stateId) throws Exception {
+		List<LocationResponse> userResponses = new ArrayList<>();
+		List<LocationEntity> locationResponses = new ArrayList<>();
+		
+		logger.info("********************UtilityServicesImpl getAllLocations******************");
+		
+		locationResponses = locationRepository.findByStateIdAndIsdeleted(stateId,"N");
+		
+		if(locationResponses != null) {
+			Iterator itr = locationResponses.iterator();
+			
+			while(itr.hasNext()){
+				LocationEntity locationSingleResp = (LocationEntity) itr.next();
+				LocationResponse response = new LocationResponse();
+				
+				response.setId(locationSingleResp.getId());
+				response.setCode(locationSingleResp.getCode());				
+				response.setName(locationSingleResp.getName());
+				response.setStatus(locationSingleResp.getStatus());
+				
+				userResponses.add(response);
+			}
+		}
+		
+		return userResponses;
+	}
+	
+	
+	FORWARDER
+	
+	
+	ALTER TABLE cargo.master_user_new ADD user_login_id VARCHAR(255) AFTER user_status;

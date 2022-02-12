@@ -1,0 +1,9 @@
+Please check the below Todays list of points (5Nov2020)
+1. Show Message if user does not exists.
+2. After successfull login open new page.
+3. Integrate New Registratio page 
+4. Add States and City dummy data into the database tables.
+5. Create Api for get all States list.
+6. Create API for get all city list.
+7. Ajax call to get all states and city 
+8. Show States and city on respective dropdowns.

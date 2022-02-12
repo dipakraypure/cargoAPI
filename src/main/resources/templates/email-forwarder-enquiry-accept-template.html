@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Book My Cargo |</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300&display=swap" rel="stylesheet">
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Roboto', sans-serif;">
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">	
+		<tr>
+			<td style="padding: 10px 0 30px 0;">
+				<table align="center" border="0" cellpadding="0" cellspacing="0" width="800" style="border: 1px solid #cccccc; border-collapse: collapse;">
+					<tr>
+						<td align="left" style="padding: 10px 0px;">
+							<img src="https://i.ibb.co/PDDDWrR/bar.jpg" alt="http://15.207.223.54:8080/cargo/" style="display: block;margin-left: 15px; width:756px;" />
+						</td>
+					</tr>
+					<tr>
+						<td bgcolor="#ffffff" style="padding: 40px 30px 40px 30px;">
+							<table border="0" cellpadding="0" cellspacing="0" width="100%">
+								<tr>									
+                                    <p style="color: #4A4648; font-family: 'Roboto', sans-serif; font-size:12px;font-weight: 300;">Hi,</p>
+                                    <p style="color: #4A4648; font-family: 'Roboto', sans-serif; font-size:12px;font-weight: 300;">A quotation has been received on <label th:text="${acceptedDate}"></label> from <label th:text="${origin}"></label> to <label th:text="${destination}"></label> for <span th:if="${shipmentType} == 'FCL'"><b><label th:text="${selectedFcl}"></label> <label th:text="${shipmentType}"></label></b> container.</span><span th:if="${shipmentType} == 'LCL'"><b><label th:text="${selectedLcl}"></label></b></span></p>
+                                    <div style="padding: 5px 0px; border-radius: 10px; margin: 10px 0;width: 75%;">  
+                                        <p><span style="font-size:14px;font-weight: 600; color: #ed8b5c">Enquiry Reference:  </span> <span><label th:text="${enquiryReference}" style="font-size:14px;font-weight: 500; color: #161a47">abcd</label></span></p>										                                        
+                                    </div> 
+
+									<table border="0" cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid #ccc;">
+										<thead>
+											<tr>
+												<th style="font-size:12px;text-align:left;background:#ccc;padding: 8px;">Quotation From</th>
+												<th style="font-size:12px;text-align:left;background:#ccc;padding: 8px;">Date of Quotation</th>
+												<th style="font-size:12px;text-align:left;background:#ccc;padding: 8px;">Quotation Status</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td style="font-size:12px;text-align:left;padding: 8px;color: #4A4648;"><span><label th:text="${quotationFrom}"></label></span></td>
+												<td style="font-size:12px;text-align:left;padding: 8px;color: #4A4648;"><span><label th:text="${quotationDate}"></label></span></td>
+												<td style="font-size:12px;text-align:left;padding: 8px;color: #4A4648;"><span><label th:text="${quotationStatus}"></label></span></td>
+											</tr>
+										</tbody>
+									</table>																		
+									  <p style="margin-top:25px;"><span style="font-size:14px;font-weight: 600; color: #ed8b5c">Enquiry Details  </span> </p>
+									<table border="0" cellpadding="0" cellspacing="0" width="100%" style=" border: 1px solid #ccc;">
+										<thead>
+											<tr>
+												<th style="font-size:12px;text-align:left;background:#ccc;padding: 8px;">Enquiry Date</th>
+												<th style="font-size:12px;text-align:left;background:#ccc;padding: 8px;">Origin</th>
+												<th style="font-size:12px;text-align:left;background:#ccc;padding: 8px;">Destination</th>
+												<th style="font-size:12px;text-align:left;background:#ccc;padding: 8px;">Cargo Ready Date</th>											
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td style="font-size:12px;text-align:left;padding: 8px;color: #4A4648;"><span><label th:text="${enqSearchDate}"></label></span></td>
+												<td style="font-size:12px;text-align:left;padding: 8px;color: #4A4648;"><span><label th:text="${origin}"></label></span></td>
+												<td style="font-size:12px;text-align:left;padding: 8px;color: #4A4648;"><span><label th:text="${destination}"></label></span></td>
+												<td style="font-size:12px;text-align:left;padding: 8px;color: #4A4648;"><span><label th:text="${cargoReadyDate}"></label></span></td>																								
+											</tr>
+										</tbody>
+									</table><br>										
+                                    <p style="color: #4A4648; font-family: 'Roboto', sans-serif; font-size:12px;font-weight: 300;">This is a system generated email, please do not reply to this mail ID. Please login to your account to check quotation details.</p>											
+								</tr>
+								<tr>
+						<td bgcolor="#E4E4E4">
+							<table border="0" cellpadding="0" cellspacing="0" width="100%">
+								<tr>
+									<td align="center" bgcolor="#E4E4E4">
+                                        
+                                        <p style="color: #161a47;padding: 15px 0;font-size:12px;font-weight: 600;">BookMyCargo.online © 2021</p>
+                                    </td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+							</table>
+						</td>
+					</tr>
+					
+				</table>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

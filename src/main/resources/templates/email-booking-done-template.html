@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Book My Cargo |</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300&display=swap" rel="stylesheet">
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Roboto', sans-serif;">
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">	
+		<tr>
+			<td style="padding: 10px 0 30px 0;">
+				<table align="center" border="0" cellpadding="0" cellspacing="0" width="800" style="border: 1px solid #cccccc; border-collapse: collapse;">
+					<tr>
+						<td align="left" style="padding: 10px 0px;">
+							<img src="https://i.ibb.co/PDDDWrR/bar.jpg" alt="http://15.207.223.54:8080/cargo/" style="display: block;margin-left: 15px; width:756px;" />
+						</td>
+					</tr>
+					<tr>
+						<td bgcolor="#ffffff" style="padding: 40px 30px 40px 30px;">
+							<table border="0" cellpadding="0" cellspacing="0" width="100%">
+								<tr>									
+                                    <p style="color: #4A4648; font-family: 'Roboto', sans-serif; font-size: 12px;font-weight: 300;">Hi,</p>
+                                    <p style="color: #4A4648; font-family: 'Roboto', sans-serif; font-size: 12px;font-weight: 300;">Your booking request submitted on <label th:text="${bookingdate}"></label> from <label th:text="${origin}"></label> to <label th:text="${destination}"></label> for <span th:if="${shipmenttype} == 'FCL'"><b><label th:text="${fclselected}"></label> <label th:text="${shipmenttype}"></label></b> container</span><span th:if="${shipmentType} == 'LCL'"><b><label th:text="${lclselected}"></label></b></span> has been sent to Express Global.</p>
+                                    <div style="padding: 5px 0px; border-radius: 10px; margin: 10px 0;width: 75%;">  
+                                        <p><span style="font-size: 14px;font-weight: 600; color: #ed8b5c">Booking Reference:  </span> <span><label th:text="${bookingreff}" style="font-size: 14px;font-weight: 500; color: #161a47"></label></span></p>										                                        
+                                    </div> 
+									<table border="0" cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid #ccc;">
+										<thead>
+											<tr>
+												<th style="font-size: 12px;text-align:left;background:#ccc;padding: 8px;">Booked By</th>
+												<th style="font-size: 12px;text-align:left;background:#ccc;padding: 8px;">Date of Booking</th>
+												<th style="font-size: 12px;text-align:left;background:#ccc;padding: 8px;">Booking Status</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td style="font-size: 12px;text-align:left;padding: 8px;color: #4A4648;"><span><label th:text="${bookedby}"></label></span></td>
+												<td style="font-size: 12px;text-align:left;padding: 8px;color: #4A4648;"><span><label th:text="${bookingdate}"></label></span></td>
+												<td style="font-size: 12px;text-align:left;padding: 8px;color: #4A4648;"><span><label th:text="${bookingstatus}"></label></span></td>
+											</tr>
+										</tbody>
+									</table>
+									
+									<table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-top:25px; border: 1px solid #ccc;">
+										<thead>
+											<tr>
+												<th style="text-align:left;background:#ccc;padding: 8px;font-size: 12px;font-weight: 600;">Booking Party</th>
+												
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td style="font-size: 12px;text-align:left;padding: 8px;"><span><label th:text="${bookingparty}"></label></span></td>
+												
+											</tr>
+										</tbody>
+									</table>
+									  <p style="margin-top:25px;"><span style="font-size: 14px;font-weight: 600; color: #ed8b5c">Booking Details  </span> </p>
+									<table border="0" cellpadding="0" cellspacing="0" width="100%" style=" border: 1px solid #ccc;">
+										<thead>
+											<tr>
+												<th style="font-size: 12px;text-align:left;background:#ccc;padding: 8px;">Date</th>
+												<th style="font-size: 12px;text-align:left;background:#ccc;padding: 8px;">Origin</th>
+												<th style="font-size: 12px;text-align:left;background:#ccc;padding: 8px;">Destination</th>
+												<th style="font-size: 12px;text-align:left;background:#ccc;padding: 8px;">Cut-off Date</th>
+											
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td style="font-size: 12px;text-align:left;padding: 8px;color: #4A4648;"><span><label th:text="${dateofbooking}"></label></span></td>
+												<td style="font-size: 12px;text-align:left;padding: 8px;color: #4A4648;"><span><label th:text="${origin}"></label></span></td>
+												<td style="font-size: 12px;text-align:left;padding: 8px;color: #4A4648;"><span><label th:text="${destination}"></label></span></td>
+												<td style="font-size: 12px;text-align:left;padding: 8px;color: #4A4648;"><span><label th:text="${cutoffdate}"></label></span></td>
+												
+												
+											</tr>
+										</tbody>
+									</table>
+									
+									<table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-top:25px; border: 1px solid #ccc;">
+										<thead>
+											<tr>
+												<th style="font-size: 12px;text-align:left;background:#ccc;padding: 8px;">Origin</th>
+												<th style="font-size: 12px;text-align:left;background:#ccc;padding: 8px;">Destination</th>
+												<th style="font-size: 12px;text-align:left;background:#ccc;padding: 8px;">Mode</th>
+												<th style="font-size: 12px;text-align:left;background:#ccc;padding: 8px;">Carrier</th>
+												<th style="font-size: 12px;text-align:left;background:#ccc;padding: 8px;">Vessel Name</th>
+												<th style="font-size: 12px;text-align:left;background:#ccc;padding: 8px;">Voyage Name</th>
+												<th style="font-size: 12px;text-align:left;background:#ccc;padding: 8px;">Transit Time</th>
+												<th style="font-size: 12px;text-align:left;background:#ccc;padding: 8px;">ETD</th>
+												<th style="font-size: 12px;text-align:left;background:#ccc;padding: 8px;">ETA</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr th:each="scheduleLegs : ${scheduleLegsResponse}">
+												<td style="font-size: 12px;text-align:left;padding: 8px;color: #4A4648;"><span><label th:text="${scheduleLegs.origin}"></label></span></td>
+												<td style="font-size: 12px;text-align:left;padding: 8px;color: #4A4648;"><span><label th:text="${scheduleLegs.destination}"></label></span></td>
+												<td style="font-size: 12px;text-align:left;padding: 8px;color: #4A4648;"><span><label th:text="${scheduleLegs.mode}"></label></span></td>
+												<td style="font-size: 12px;text-align:left;padding: 8px;color: #4A4648;"><span><label th:text="${scheduleLegs.carrier}"></label></span></td>
+												<td style="font-size: 12px;text-align:left;padding: 8px;color: #4A4648;"><span><label th:text="${scheduleLegs.vessel}"></label></span></td>
+												<td style="font-size: 12px;text-align:left;padding: 8px;color: #4A4648;"><span><label th:text="${scheduleLegs.voyage}"></label></span></td>
+												<td style="font-size: 12px;text-align:left;padding: 8px;"><span><label th:text="${scheduleLegs.transittime}"></label></span></td>
+												<td style="font-size: 12px;text-align:left;padding: 8px;color: #4A4648;"><span><label th:text="${scheduleLegs.etddate}"></label></span></td>
+												<td style="font-size: 12px;text-align:left;padding: 8px;color: #4A4648;"><span><label th:text="${scheduleLegs.etadate}"></label></span></td>												
+											</tr>
+										</tbody>
+									</table>
+									
+									 <p style="margin-top:25px;"><span style="font-size: 14px;font-weight: 600; color: #ed8b5c">Charges Summary  </span> </p>
+									<table border="0" cellpadding="0" cellspacing="0" width="100%" style=" border: 1px solid #ccc;">						
+										<thead>
+											<tr>
+												<th style="font-size: 12px;text-align:left;background:#ccc;padding: 8px;">Charges Grouping</th>
+												<th style="font-size: 12px;text-align:left;background:#ccc;padding: 8px;">Charge Type</th>
+												<th style="font-size: 12px;text-align:left;background:#ccc;padding: 8px;">Currency</th>
+												<th style="font-size: 12px;text-align:left;background:#ccc;padding: 8px;">Rate</th>	
+												<th style="font-size: 12px;text-align:left;background:#ccc;padding: 8px;">Basis</th>	
+												<th style="font-size: 12px;text-align:left;background:#ccc;padding: 8px;">Quantity</th>	
+												<th style="font-size: 12px;text-align:left;background:#ccc;padding: 8px;">Total</th>									
+											</tr>
+										</thead>
+										<tbody>
+											<tr th:each="schargesRateResponse : ${chargesRateResponseList}">
+											    <td style="font-size: 12px;text-align:left;padding: 8px;color: #4A4648;"><span><label th:text="${schargesRateResponse.chargesgrouping}"></label></span></td>
+												<td style="font-size: 12px;text-align:left;padding: 8px;color: #4A4648;"><span><label th:text="${schargesRateResponse.chargestype}"></label></span></td>
+												<td style="font-size: 12px;text-align:right;padding: 8px;color: #4A4648;"><span><label th:text="${schargesRateResponse.currency}"></label></span></td>
+												<td style="font-size: 12px;text-align:right;padding: 8px;color: #4A4648;"><span><label  th:text="${schargesRateResponse.rate}"></label></span></td>
+												<td style="font-size: 12px;text-align:left;padding: 8px;color: #4A4648;"><span><label  th:text="${schargesRateResponse.basis}"></label></span></td>
+												<td style="font-size: 12px;text-align:right;padding: 8px;color: #4A4648;"><span><label  th:text="${schargesRateResponse.quantity}"></label></span></td>
+												<td style="font-size: 12px;text-align:right;padding: 8px;color: #4A4648;"><span><label  th:text="${schargesRateResponse.totalamount}"></label></span></td>
+											</tr>											
+										</tbody>
+									</table>
+									<p style="margin-top:25px;"><span style="font-size: 14px;font-weight: 600; color: #ed8b5c">Total Charges</span> </p>
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid #ccc;">
+										<thead>
+											<tr>
+												<th style="font-size: 12px;text-align:left;background:#ccc;padding: 8px;">Charges Summary</th>
+												<th style="font-size: 12px;text-align:left;background:#ccc;padding: 8px;">USD</th>
+												<th style="font-size: 12px;text-align:left;background:#ccc;padding: 8px;">INR</th>
+											</tr>
+										</thead>
+										<tbody>
+										   <tr th:each="chargesGroupingCurrencyResponse : ${chargesGroupingCurrencyResponseList}">
+											<td style="font-size: 12px;text-align:left;padding: 8px;color: #4A4648;"><span><label  th:text="${chargesGroupingCurrencyResponse.group}"></label></span></td>
+										    <td style="font-size: 12px;text-align:right;padding: 8px;color: #4A4648;"><span><label  th:text="${chargesGroupingCurrencyResponse.usd}"></label></span></td>
+											<td style="font-size: 12px;text-align:right;padding: 8px;color: #4A4648;"><span><label  th:text="${chargesGroupingCurrencyResponse.inr}"></label></span></td>
+										   </tr>
+										   <tr>
+											<td style="font-size: 12px;text-align:left;padding: 8px;"><b>Total Amount<b/></td>
+										    <td style="font-size: 12px;text-align:right;padding: 8px;color: #4A4648;"><span><label  th:text="${totalamountusd}"></label></span></td>
+											<td style="font-size: 12px;text-align:right;padding: 8px;color: #4A4648;"><span><label  th:text="${totalamountinr}"></label></span></td>
+										   </tr>
+										</tbody>
+									</table>																		
+                                   <p style="color: #4A4648; font-family: 'Roboto', sans-serif; font-size: 12px;font-weight: 300;">This is a system generated email, please do not reply to this mail ID.</p>
+								</tr>
+								<tr>
+						<td bgcolor="#E4E4E4">
+							<table border="0" cellpadding="0" cellspacing="0" width="100%">
+								<tr>
+									<td align="center" bgcolor="#E4E4E4">
+                                        
+                                        <p style="color: #161a47;padding: 15px 0;font-size: 12px;font-weight: 600;">BookMyCargo.online © 2021</p>
+                                    </td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+							</table>
+						</td>
+					</tr>
+					
+				</table>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
